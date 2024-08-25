@@ -1,0 +1,274 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url("../imagens/fundo.jpeg") no-repeat
+    center center;
+    background-size: cover;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #ff6347;
+    color: white;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 5px 10px;
+    font-size: 20px;
+}
+
+nav ul li a {
+    display: inline-block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    background-color: rgb(255, 255, 255); 
+    color: #ff6347; 
+    border-radius: 30px;
+}
+
+.dropdown-menu{
+    z-index: 1000; 
+    position: absolute;
+    display: none;
+    background-color: #ff6347; 
+    padding: 10px;
+    border-radius: 5px; 
+    list-style: none;
+}
+
+.dropdown-menu a{
+    display: block;
+}
+
+.dropdown-menu a:hover {
+    background-color: rgb(255, 255, 255); 
+    color: #ff6347; 
+    border-radius: 30px;
+}
+
+.dropdown:hover .dropdown-menu{
+    display: block;
+}
+
+h2 {
+    color: #ff6347;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+main {
+    padding: 20px;
+}
+
+.formulario{
+    max-width: 650px;
+    margin: 50px auto;
+    background-color: #ff6347;
+    padding: 20px;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+}
+.formulario input{
+    background-color: #e0dfdf;
+    margin: 8px;
+    width: 94%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+}
+.formulario select{
+    background-color: #e0dfdf;
+    border: none;
+    border-radius: 5px;
+    margin: 8px;
+    width: 50%;
+    padding: 10px;
+    font-size: 16px;
+}
+.formulario textarea{
+    border: none;
+    border-radius: 5px;
+    margin: 8px;
+    width: 95%;
+    padding: 10px;
+    background-color: #e0dfdf;
+}
+.formulario button{
+    width: 20%;
+    display: inline;
+    margin: 8px 0;
+    padding: 8px;
+    background-color: #f4f4f4;
+    border: 1px solid #b8b8b8;
+    margin-left: 10px;
+}
+.formulario input[type="checkbox"],
+.formulario input[type="radio"]{
+    width: auto;
+}
+.formulario input[id="data"]{
+    width: 40%;
+}
+
+label {
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 0.01%;
+}
+
+address {
+    font-style: normal;
+    color: #929292;
+    margin-top: 20px;
+    line-height: 1.5;
+}
+
+address a {
+    color: white;
+}
+
+.menu-icon {
+    display: none; 
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: white;
+}
+
+#menu-p {
+    display: none;
+}
+@media (max-width: 767px) {
+    header, header img{
+        height: 70px;
+    }
+    .menu-icon {
+        display: block;
+    }
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute; 
+        margin-top: auto;
+        right: -100%; 
+        height: auto;
+        width: 33%; 
+        background-color: #ff6347;
+        transition: right 0.3s ease; 
+        padding: 10px 0;
+        z-index: 1000;
+        border-radius: 5px;
+    }
+    nav ul li {
+        display: block;
+        text-align: center;
+        margin: 10px 0;
+    }
+    nav ul li a {
+        display: block;
+        padding: 15px;
+        font-size: 18px;
+    }
+    #menu-p:checked + .menu-icon + nav ul {
+        right: 0;
+    }
+    .dropdown-menu {
+        min-width: 120px;
+        width: 91%;
+        height: auto;
+        z-index: 1000; 
+        position: absolute;
+        display: none;
+        background-color: #ff6347; 
+        padding: 10px;
+        border-radius: 5px; 
+        list-style: none;
+        left: -100%; 
+        top: 0;
+    }
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+    footer {
+        padding: 10px;
+        font-size: 15px;
+    }
+    h2 {
+        display: none;
+    }
+    .formulario {
+        margin: 20px auto; 
+    }
+    .formulario input{
+        width: 90%;
+    }
+    .formulario select{
+        width: 40%;
+    }
+    .formulario textarea{
+        width: 80%;
+    }
+    .formulario button {
+        width: 35%; 
+        font-size: 16px;
+    }
+}
+@media (min-width: 992px) and (max-width: 1900px){
+    .formulario {
+        margin: 20px auto; 
+    }
+    .formulario input{
+        width: 90%;
+    }
+    .formulario select{
+        width: 40%;
+    }
+    .formulario textarea{
+        width: 90%;
+    }
+    .formulario button {
+        width: 30%; 
+        font-size: 16px;
+    }
+} 
+@media(min-width: 768px) and (max-width: 991px){
+    .formulario {
+        margin: 20px auto; 
+    }
+    .formulario input{
+        width: 90%;
+    }
+    .formulario select{
+        width: 40%;
+    }
+    .formulario textarea{
+        width: 90%;
+    }
+    .formulario button {
+        width: 30%; 
+        font-size: 16px;
+    }
+}

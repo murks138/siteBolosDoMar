@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <link rel="shortcut icon" href="../imagens/favicon.ico">
+    <link rel="stylesheet" href="../estilos/contato.css">
+</head>
+<body>
+    <header>
+        <img src="../imagens/logo.png" alt="Logo do Site">
+        <input type="checkbox" id="menu-p">
+        <label for="menu-p" class="menu-icon">&#9776;</label>
+        <nav>
+            <ul id="menu">
+                <li><a href="../index.html">Página Principal</a></li>
+                <li class="dropdown">
+                    <a href="receita.html">Receitas</a>
+
+                    <ul class="dropdown-menu">
+                        <a href="receita.html#boloChoco">Bolo de Chocolate </a>
+                        <a href="receita.html#boloCeno">Bolo de Cenoura</a>
+                        <a href="receita.html#boloNinho">Bolo de Ninho</a>
+                        <a href="receita.html#boloFuba">Bolo de Fubá</a>
+                        <a href="receita.html#boloLaranja">Bolo de Laranja</a>
+                    </ul>
+                </li>
+                <li><a href="dicas.html">Dicas & Truques</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>CONTATE-NOS:</h2>
+        <section class="formulario">
+            <form id="contatoForm" onsubmit="return enviarFormulario(event, this);">
+                <label for="nome">Nome (OBRIGATÓRIO)</label><br>
+                <input type="text" id="nome" name="nome" required>
+                <label for="email">Email (OBRIGATÓRIO)</label><br>
+                <input type="email" id="email" name="email" required>
+                <label for="telefone">Telefone</label><br>
+                <input type="tel" id="telefone" name="telefone">
+                <label for="endereco">Endereço</label><br>
+                <input type="text" id="endereco" name="endereco">
+                <label for="data">Data de Nascimento</label><br>
+                <input type="date" id="data" name="data">
+                <label for="sexo">Sexo</label>
+                <input name="sexo" type="radio" id="m" value="M">M
+                <input name="sexo" type="radio" id="f">F<br>
+                <select name="motivo" id="motivo" required>
+                    <option value=""></option>
+                    <option value="duvida">Dúvidas</option>
+                    <option value="reclamacao">Reclamação</option>
+                    <option value="sugestao">Sugestão</option>
+                </select>
+                <label for="motivo">Qual o motivo do contato?</label><br><br>
+                <label for="mensagem">Mensagem</label><br>
+                <textarea id="mensagem" name="mensagem" rows="5" required></textarea><br>
+                
+                <input name="novidade" type="checkbox" id="novidade">Deseja receber novidades?<br>        
+                <button type="submit">Enviar</button>
+                <button type="reset">Limpar</button>
+            </form>
+            <p id="resultado"></p>
+        </section>
+        <script src="../script/contato.js"></script>
+    </main>
+    <footer>
+        <p>&copy; 2024, Desenvolvido por Marcos Paulo.</p>
+        <address>
+            Rua Odacyr Franco, 05, Boituva - São Paulo, CEP 18552344 |
+            <a href="contato.html">Fale Conosco</a>
+            | marcos.araujo1@aluno.ifsp.edu.br
+        </address>
+    </footer>
+</body>
+</html>
